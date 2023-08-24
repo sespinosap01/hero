@@ -17,7 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home/{name}', function ($name) {
-    return view ("home", ["name"=>$name]);
-    //return "Hola " .$name ."! Como estas hoy?";
-})->where("name", "[A-Za-z]+");
+Route::group(['prefix' => 'admin'], function(){
+    Route::get('/', 'App\Http\Controllers\AdminController@index')->name('admin.index');
+
+    Route::resource('heroes', 'App\Http\Controllers\HeroController');
+    Route::resource('item', 'App\Http\Controllers\ItemController');
+    Route::resource('enemy', 'App\Http\Controllers\EnemyController');
+
+});
+
+
+        
