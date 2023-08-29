@@ -14,6 +14,7 @@
                 <th scope="col">Suerte</th>
                 <th scope="col">Monedas</th>
                 <th scope="col">Experiencia</th>
+                <th scope="col">Imagen</th>
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
@@ -28,6 +29,9 @@
                     <td>{{$hero->luck}}</td>   
                     <td>{{$hero->coins}}</td>
                     <td>{{$hero->xp}}</td>     
+                    <td>     
+                         <img src="{{asset('images/heroes/' . $hero->img_path)}}" width="50" height="50">
+                    </td>
                     <td>
                       <div class="row">
                         <div class="col">

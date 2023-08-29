@@ -13,6 +13,7 @@
                 <th scope="col">Defensa</th>
                 <th scope="col">Monedas</th>
                 <th scope="col">Experiencia</th>
+                <th scope="col">Imagen</th>
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
@@ -26,6 +27,9 @@
                     <td>{{$enemy->def}}</td>   
                     <td>{{$enemy->coins}}</td>
                     <td>{{$enemy->xp}}</td>
+                    <td>     
+                      <img src="{{asset('images/enemies/' . $enemy->img_path)}}" width="50" height="50">
+                 </td>
                     <td>
                       <div class="row">
                         <div class="col">

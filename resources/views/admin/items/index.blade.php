@@ -13,6 +13,7 @@
                 <th scope="col">Defensa</th>
                 <th scope="col">Suerte</th>
                 <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
@@ -26,6 +27,9 @@
                     <td>{{$item->def}}</td>   
                     <td>{{$item->luck}}</td>   
                     <td>{{$item->cost}}</td>
+                    <td>     
+                      <img src="{{asset('images/items/' . $item->img_path)}}" width="50" height="50">
+                    </td>
                     <td>
                       <div class="row">
                         <div class="col">
