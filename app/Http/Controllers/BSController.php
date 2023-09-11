@@ -10,13 +10,11 @@ use App\Models\Enemy;
 class BSController extends Controller
 {
     public function index(){
-
-        //dd($this->runManualBattle(13,4));
                 
-        return view('admin.bs.index', $this->runAutoBattle(13,4));
+        return view('admin.bs.index', $this->runAutoBattle(20,11));
     }
 
-    public function runAutoBattle($heroId, $enemyId){
+    public static function runAutoBattle($heroId, $enemyId){
         $hero = Hero::find($heroId)->first();
         $enemy = Enemy::find($enemyId)->first();
 
